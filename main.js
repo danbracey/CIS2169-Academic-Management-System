@@ -63,42 +63,24 @@ function renderHTML(data){
 
 }
 
-function displayDegreePrograms(toggle) {
-  switch (toggle) {
-    case 1:
-      getDegreeProgramData('undergraduate');
-      break
-    case 2:
-      getDegreeProgramData('postgraduate');
-      break
-    case 3:
-      getDegreeProgramData('research');
-  }
-}
-
 function getDegreeProgramData(word) {
-  console.log("A");
   const ourRequest = new XMLHttpRequest();
-  ourRequest.open('GET', '/' + word  + '.json');
+  ourRequest.open('GET', 'module-1.json');
   ourRequest.onload = function(){
-    //console.log(ourRequest.responseText);
+    console.log(ourRequest.responseText);
     var ourData = JSON.parse(ourRequest.responseText);
-    //console.log(ourData[0]);
     // Find a <table> element with id="myTable":
     var table = document.getElementById("degreePrograms");
 
-    for(let i=0; i > ourData.length; i++) {
-      var row = table.insertRow(0);
+    for(let i=0; i < ourData.length; i++) {
+      var row = table.insertRow(1);
       var cell1 = row.insertCell(0);
       var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
 
-      let moduleCounter = 0;
-      for(let i=0; i > ourData[i].Modules.length; i++) {
-        moduleCounter++;
-      }
-
-      cell1.innerHTML = ourData[i].Name;
-      cell2.innerHTML = moduleCounter;
+      cell1.outerHTML = '<td><a href="module.html?id=' + i + '">' + ourData[i]["Course"] + '</a></td>';
+      cell2.innerHTML = ourData[i]["Name"];
+      cell2.innerHTML = ourData[i]["Modules"].length;
     }
   };
   ourRequest.send();
