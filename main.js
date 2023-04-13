@@ -26,12 +26,15 @@ function getCourseData(courseID) {
   ourRequest = new XMLHttpRequest();
   ourRequest.open('GET', 'data.json');
   ourRequest.onload = function(){
-    console.log(ourRequest.responseText);
+    //console.log(ourRequest.responseText);
     var ourData = JSON.parse(ourRequest.responseText);
     let course = ourData[courseID];
 
     // Change title
     document.title = course["Course"] + " | Academic Management System";
+
+    // Overview Information
+    document.getElementById("timetabled_hours_overview").innerHTML = calculateCourseTimetableHours(courseID, ourData) + " hrs"
 
     var table = document.getElementById("degreePrograms");
 
@@ -48,3 +51,21 @@ function getCourseData(courseID) {
   };
   ourRequest.send();
 }
+
+function calculateCourseTimetableHours(courseID, data) {
+  console.log("Calculating timetabled hours")
+  console.log(data)
+
+  let hours = 0;
+  for(let m = 0; m < data[courseID]["Modules"].length; m++) {
+    for(let i = 0; i < data[courseID]["Modules"][m]["Timetable"].length; i++) {
+      let secondsPassed = data[courseID]["Modules"][m]["Timetable"][i]["Ends_at"] - data[courseID]["Modules"][m]["Timetable"][i]["Begins_at"]
+      hours += Math.floor((secondsPassed % 86400) / 1440) + 1
+    }
+  }
+
+  console.log("Calculated timetabled hours: " + hours);
+  return hours;
+}
+
+

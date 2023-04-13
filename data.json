@@ -32,13 +32,13 @@
         "Timetable": [
           {
             "Begins_at": 1681378020,
-            "Ends_at": 1681378025,
-            "Academic": "Tutor Name"
+            "Ends_at": 1681385220,
+            "Academic": 0
           }
         ]
       }
     ],
-    "Academic": "Tutor Name"
+    "Academic": 1
   },
   {
     "Name": "Post-Graduate",
