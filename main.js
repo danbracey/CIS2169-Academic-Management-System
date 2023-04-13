@@ -1,71 +1,6 @@
-var pageCounter = 1;
-var moduleContainer = document.getElementById('module-info');
-var btn = document.getElementById("btn");
-
-/**btn.addEventListener("click", function(){
-  var ourRequest = new XMLHttpRequest();
-  ourRequest.open('GET', 'https://raw.githubusercontent.com/profharimohanpandey/CW2/master/module-'+ pageCounter +'.json');
-  ourRequest.onload = function(){
-    //console.log(ourRequest.responseText);
-    var ourData = JSON.parse(ourRequest.responseText);
-    //console.log(ourData[0]);
-    renderHTML(ourData);
-  };
-  ourRequest.send();
-  pageCounter++;
-  if (pageCounter > 3){
-//btn.classList.add("hide-me");
-    btn.disabled = true;
-  }
-});**/
-
-function renderHTML(data){
-  var htmlString = "";
-
-  for(i = 0; i < data.length; i++){
-    htmlString += "<p>" + data[i].Name + " is a " + data[i].Course + " has assements "; //".</p>";
-    for(ii = 0; ii < data[i].Module.Assignment.length; ii++){
-      if (ii == 0){
-        htmlString += data[i].Module.Assignment[ii];
-      } else {
-        htmlString += " and " + data[i].Module.Assignment[ii];
-      }
-    }
-    htmlString += ' and Learning Outcome ';
-    for(ii = 0; ii < data[i].Module.Learning_outcomes.length; ii++){
-      if (ii == 0){
-        htmlString += data[i].Module.Learning_outcomes[ii];
-      } else {
-        htmlString += " and " + data[i].Module.Learning_outcomes[ii];
-      }
-    }
-
-    htmlString += ' and Volume ';
-    for(ii = 0; ii < data[i].Module.Volume.length; ii++){
-      if (ii == 0){
-        htmlString += data[i].Module.Volume[ii];
-      } else {
-        htmlString += " and " + data[i].Module.Volume[ii];
-      }
-    }
-
-    htmlString += ' and weights ';
-    for(ii = 0; ii < data[i].Module.weights.length; ii++){
-      if (ii == 0){
-        htmlString += data[i].Module.weights[ii];
-      } else {
-        htmlString += " and " + data[i].Module.weights[ii];
-      }
-    }
-    htmlString += '.</p>';
-  }
-  moduleContainer.insertAdjacentHTML('beforeend', htmlString);
-
-}
-
-function getDegreeProgramData(word) {
+function getDegreeProgramData() {
   const ourRequest = new XMLHttpRequest();
-  ourRequest.open('GET', 'module-1.json');
+  ourRequest.open('GET', 'data.json');
   ourRequest.onload = function(){
     console.log(ourRequest.responseText);
     var ourData = JSON.parse(ourRequest.responseText);
@@ -78,9 +13,37 @@ function getDegreeProgramData(word) {
       var cell2 = row.insertCell(1);
       var cell3 = row.insertCell(2);
 
-      cell1.outerHTML = '<td><a href="module.html?id=' + i + '">' + ourData[i]["Course"] + '</a></td>';
+      cell1.outerHTML = '<td><a href=course.html?id=' + i + '>' + ourData[i]["Name"] + '</a></td>';
       cell2.innerHTML = ourData[i]["Name"];
-      cell2.innerHTML = ourData[i]["Modules"].length;
+      cell3.innerHTML = ourData[i]["Modules"].length;
+    }
+  };
+  ourRequest.send();
+}
+
+function getCourseData(courseID) {
+  let ourRequest;
+  ourRequest = new XMLHttpRequest();
+  ourRequest.open('GET', 'data.json');
+  ourRequest.onload = function(){
+    console.log(ourRequest.responseText);
+    var ourData = JSON.parse(ourRequest.responseText);
+    let course = ourData[courseID];
+
+    // Change title
+    document.title = course["Course"] + " | Academic Management System";
+
+    var table = document.getElementById("degreePrograms");
+
+    for(let i=0; i < ourData.length; i++) {
+      var row = table.insertRow(1);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+
+      cell1.outerHTML = '<td><a href=' + i + '"course.html?id=">' + ourData[i]["Course"] + '</a></td>';
+      cell2.innerHTML = ourData[i]["Name"];
+      cell3.innerHTML = ourData[i]["Modules"].length;
     }
   };
   ourRequest.send();
