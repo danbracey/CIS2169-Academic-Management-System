@@ -117,8 +117,8 @@
 <script>
     var url_string = window.location.href;
     var url = new URL(url_string);
-    var paramValue = url.searchParams.get("id");
-    getCourseData(paramValue);
+    var paramValue = url.searchParams.get("code");
+    getModuleData(paramValue);
 
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();

@@ -7,7 +7,7 @@
       {
         "Code": "CISXXX",
         "Name": "Module Title",
-        "Learning_outcomes": [
+        "Learning_objectives": [
           {
             "Name": "LO1",
             "Objective": "Lorem Ipsum"
