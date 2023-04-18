@@ -114,10 +114,8 @@
 </div>
 
 <script src="main.js"></script>
+<script src="Module.js"></script>
 <script>
-    var url_string = window.location.href;
-    var url = new URL(url_string);
-    var paramValue = url.searchParams.get("code");
     getModuleData(paramValue);
 
     $(document).ready(function(){
