@@ -1,6 +1,6 @@
 function getDegreeProgramData() {
   const ourRequest = new XMLHttpRequest();
-  ourRequest.open('GET', 'db.json');
+  ourRequest.open('GET', 'data.json');
   ourRequest.onload = function(){
     console.log(ourRequest.responseText);
     var ourData = JSON.parse(ourRequest.responseText);
@@ -24,7 +24,7 @@ function getDegreeProgramData() {
 function getCourseData(courseID) {
   let ourRequest;
   ourRequest = new XMLHttpRequest();
-  ourRequest.open('GET', 'db.json');
+  ourRequest.open('GET', 'data.json');
   ourRequest.onload = function(){
     //console.log(ourRequest.responseText);
     var ourData = JSON.parse(ourRequest.responseText);
