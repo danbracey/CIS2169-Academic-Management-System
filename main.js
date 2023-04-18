@@ -5,7 +5,7 @@ function getCourseData(courseID) {
   ourRequest.onload = function(){
     //console.log(ourRequest.responseText);
     var ourData = JSON.parse(ourRequest.responseText);
-    let course = ourData[courseID];
+    let course = ourData["degreePrograms"][courseID];
 
     // Change title
     document.title = course["Course"] + " | Academic Management System";

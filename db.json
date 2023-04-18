@@ -2,8 +2,8 @@
   "degreePrograms": [
     {
       "id": "W4D7",
-      "Name": "Undergraduate",
-      "Course": "Web Development",
+      "Name": "Web Development",
+      "Level": "Undergraduate",
       "Modules": [
         "CISXXX"
       ],
@@ -13,8 +13,8 @@
     },
     {
       "id": "W4D8",
-      "Name": "Undergraduate",
-      "Course": "Web Development",
+      "Name": "Web Development",
+      "Level": "Undergraduate",
       "Academic": [
         1
       ]
