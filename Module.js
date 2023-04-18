@@ -20,7 +20,7 @@ function createModule(course, moduleCode, moduleTitle) {
     let moduleCode_verified = verify(moduleCode)
     let moduleTitle_verified = verify(moduleTitle)
 
-    fetch("localhost:3000", {
+    fetch("http://localhost:3000", {
         method: "POST",
         body: JSON.stringify({
             id: moduleCode_verified,

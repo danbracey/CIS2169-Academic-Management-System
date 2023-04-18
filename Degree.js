@@ -1,9 +1,9 @@
 function getDegreeProgramData() {
     const ourRequest = new XMLHttpRequest();
-    ourRequest.open('GET', 'db.json');
+    ourRequest.open('GET', 'http://localhost:3000/degreePrograms?_embed=Modules');
     ourRequest.onload = function(){
         console.log(ourRequest.responseText);
-        var ourData = JSON.parse(ourRequest.responseText)["degreePrograms"];
+        var ourData = JSON.parse(ourRequest.responseText);
         console.log(ourData);
         // Find a <table> element with id="myTable":
         var table = document.getElementById("degreePrograms");
@@ -14,7 +14,7 @@ function getDegreeProgramData() {
             var cell2 = row.insertCell(1);
             var cell3 = row.insertCell(2);
 
-            cell1.outerHTML = '<td><a href=course.html?id=' + ourData[i]["id"] + '>' + ourData[i]["Name"] + '</a></td>';
+            cell1.outerHTML = '<td><a href=course.html?id=' + i + '>' + ourData[i]["Name"] + '</a> (' + ourData[i]["id"] + ') </td>';
             cell2.innerHTML = ourData[i]["Level"];
             cell3.innerHTML = ourData[i]["Modules"].length;
         }

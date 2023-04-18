@@ -4,9 +4,6 @@
       "id": "W4D7",
       "Name": "Web Development",
       "Level": "Undergraduate",
-      "Modules": [
-        "CISXXX"
-      ],
       "Academic": [
         1
       ]
@@ -34,7 +31,7 @@
   ],
   "Timetable": [
     {
-      "Module": "W4D7",
+      "degreeProgramId": "W4D7",
       "Room": "THF04",
       "Begins_at": 1681378020,
       "Ends_at": 1681385220,
@@ -45,7 +42,8 @@
   "Modules": [
     {
       "id": "CISXXX",
-      "Name": "Module Title"
+      "Name": "Module Title",
+      "degreeProgramId": "W4D7"
     },
     {
       "id": "CIS2169",
