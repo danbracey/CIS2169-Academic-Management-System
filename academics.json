@@ -1,0 +1,12 @@
+[
+  {
+    "id": 0,
+    "name": "Joe Bloggs",
+    "level": "Academic"
+  },
+  {
+    "id": 1,
+    "name": "Dan Bracey",
+    "level": "Academic"
+  }
+]

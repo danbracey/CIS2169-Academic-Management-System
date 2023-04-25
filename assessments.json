@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "CW1",
+    "Volume": "1000 words",
+    "Weight": 20,
+    "Learning_objectives": ["LO1", "LO2"]
+  },
+  {
+    "Name": "CW2",
+    "Volume": "4000 words",
+    "Weight": 80,
+    "Learning_objectives": ["LO1", "LO2"]
+  }
+]

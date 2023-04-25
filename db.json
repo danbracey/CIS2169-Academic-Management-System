@@ -4,20 +4,34 @@
       "id": "W4D7",
       "Name": "Web Development",
       "Level": "Undergraduate",
-      "Academic": [
-        1
+      "Learning_objectives": [
+        {
+          "id": "LO1",
+          "Objective": "Lorem Ipsum"
+        },
+        {
+          "id": "LO2",
+          "Objective": "Lorem Ipsum"
+        }
       ]
     },
     {
       "id": "W4D8",
       "Name": "Web Development",
       "Level": "Undergraduate",
-      "Academic": [
-        1
+      "Learning_objectives": [
+        {
+          "id": "LO1",
+          "Objective": "Lorem Ipsum"
+        },
+        {
+          "id": "LO2",
+          "Objective": "Lorem Ipsum"
+        }
       ]
     }
   ],
-  "users": [
+  "Academics": [
     {
       "id": 0,
       "name": "Joe Bloggs",
@@ -29,35 +43,83 @@
       "level": "Academic"
     }
   ],
-  "Timetable": [
-    {
-      "degreeProgramId": "W4D7",
-      "Room": "THF04",
-      "Begins_at": 1681378020,
-      "Ends_at": 1681385220,
-      "Recurring": 0,
-      "Academic": 0
-    }
-  ],
   "Modules": [
     {
       "id": "CISXXX",
       "Name": "Module Title",
-      "degreeProgramId": "W4D7"
+      "degreeProgramId": "W4D7",
+      "Learning_objectives": [
+        {
+          "id": "LO1",
+          "Objective": "Lorem Ipsum"
+        },
+        {
+          "id": "LO2",
+          "Objective": "Lorem Ipsum"
+        }
+      ]
     },
     {
       "id": "CIS2169",
-      "Name": "Web Application Development"
+      "Name": "Web Application Development",
+      "Learning_objectives": [
+        {
+          "id": "LO1",
+          "Objective": "Lorem Ipsum"
+        },
+        {
+          "id": "LO2",
+          "Objective": "Lorem Ipsum"
+        }
+      ]
+    },
+    {
+      "id": "CIS2170",
+      "Name": "Web Application Development",
+      "degreeProgramId": "W4D7",
+      "Learning_objectives": [
+        {
+          "id": "LO1",
+          "Objective": "Lorem Ipsum"
+        },
+        {
+          "id": "LO2",
+          "Objective": "Lorem Ipsum"
+        }
+      ]
+    },
+    {
+      "id": "CIS2171",
+      "Name": "Web Application Development",
+      "degreeProgramId": "W4D7",
+      "Learning_objectives": [
+        {
+          "id": "LO1",
+          "Objective": "Lorem Ipsum"
+        },
+        {
+          "id": "LO2",
+          "Objective": "Lorem Ipsum"
+        }
+      ]
     }
   ],
   "Assessments": [
     {
       "Name": "CW1",
       "Volume": "1000 words",
-      "Modules": [
-        "CISXXX"
-      ],
-      "Weight": 20
+      "moduleId": "CISXXX",
+      "Weight": 20,
+      "Learning_objectives": [
+        {
+          "id": "LO1",
+          "Objective": "Lorem Ipsum"
+        },
+        {
+          "id": "LO2",
+          "Objective": "Lorem Ipsum"
+        }
+      ]
     },
     {
       "Name": "CW2",
@@ -65,25 +127,17 @@
       "Modules": [
         "CISXXX"
       ],
-      "Weight": 80
-    }
-  ],
-  "Learning_objectives": [
-    {
-      "id": "LO1",
-      "Objective": "Lorem Ipsum",
-      "Modules": [
-        "CISXXX"
-      ],
-      "degreePrograms": []
-    },
-    {
-      "id": "LO2",
-      "Objective": "Lorem Ipsum",
-      "Modules": [
-        "CISXXX"
-      ],
-      "degreePrograms": []
+      "Weight": 80,
+      "Learning_objectives": [
+        {
+          "id": "LO1",
+          "Objective": "Lorem Ipsum"
+        },
+        {
+          "id": "LO2",
+          "Objective": "Lorem Ipsum"
+        }
+      ]
     }
   ]
 }

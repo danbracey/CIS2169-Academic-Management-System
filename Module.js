@@ -37,3 +37,4 @@ window.addEventListener("load", () => {
     var url = new URL(url_string);
     var paramValue = url.searchParams.get("code");
 });
+

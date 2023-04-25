@@ -1,0 +1,26 @@
+[
+  {
+    "id": "CISXXX",
+    "Name": "Module Title",
+    "Assessments": ["CW1", "CW2"],
+    "Learning_objectives": ["LO1", "LO2"]
+  },
+  {
+    "id": "CIS2169",
+    "Name": "Web Application Development",
+    "Assessments": ["CW1", "CW2"],
+    "Learning_objectives": ["LO1", "LO2"]
+  },
+  {
+    "id": "CIS2170",
+    "Name": "Web Application Development",
+    "Assessments": ["CW1", "CW2"],
+    "Learning_objectives": ["LO1", "LO2"]
+  },
+  {
+    "id": "CIS2171",
+    "Name": "Web Application Development",
+    "Assessments": ["CW1", "CW2"],
+    "Learning_objectives": ["LO1", "LO2"]
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "W4D7",
+    "Name": "Web Development",
+    "Level": "Undergraduate",
+    "Modules": ["CIS2169", "CISXXX"],
+    "Learning_objectives": ["LO1", "LO2"]
+  },
+  {
+    "id": "W4D8",
+    "Name": "Big Data",
+    "Level": "Undergraduate",
+    "Modules": ["CIS2169", "CISXXX"],
+    "Learning_objectives": ["LO1", "LO2"]
+  }
+]
