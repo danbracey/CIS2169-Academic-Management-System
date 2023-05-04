@@ -6,6 +6,16 @@ class Module extends DegreeProgram {
     private _academic;
     private _academic_year;
 
+    constructor(id, name, academic, degreeProgramName, hours, credits, degreeProgramAcademic, academic_year) {
+        super(id, degreeProgramName, degreeProgramAcademic);
+        this.id = id;
+        this._name = name;
+        this._hours = hours;
+        this._credits = credits;
+        this._academic = academic;
+        this._academic_year = academic_year;
+    }
+
     get id() {
         return this.id;
     }

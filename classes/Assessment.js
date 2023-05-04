@@ -41,6 +41,12 @@ class Assessment {
     }
 
     set weighting(value) {
-        this._weighting = value;
+        if(value > 100) {
+            throw new Error();
+        } else {
+            //if the total weighting of all assessments for this module exceeds 100%, then throw an error
+            //Unsure of how to include the module for this assessment
+            this._weighting = value;
+        }
     }
 }
