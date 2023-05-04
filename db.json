@@ -1,89 +1,104 @@
-{
-  "degreePrograms": [
-    {
-      "id": "W4D7",
-      "Name": "Web Development",
-      "Level": "Undergraduate",
-      "Academic": [
-        1
-      ]
-    },
-    {
-      "id": "W4D8",
-      "Name": "Web Development",
-      "Level": "Undergraduate",
-      "Academic": [
-        1
-      ]
-    }
-  ],
-  "users": [
-    {
-      "id": 0,
-      "name": "Joe Bloggs",
-      "level": "Academic"
-    },
-    {
-      "id": 1,
-      "name": "Dan Bracey",
-      "level": "Academic"
-    }
-  ],
-  "Timetable": [
-    {
-      "degreeProgramId": "W4D7",
-      "Room": "THF04",
-      "Begins_at": 1681378020,
-      "Ends_at": 1681385220,
-      "Recurring": 0,
-      "Academic": 0
-    }
-  ],
-  "Modules": [
-    {
-      "id": "CISXXX",
-      "Name": "Module Title",
-      "degreeProgramId": "W4D7"
-    },
-    {
-      "id": "CIS2169",
-      "Name": "Web Application Development"
-    }
-  ],
-  "Assessments": [
-    {
-      "Name": "CW1",
-      "Volume": "1000 words",
-      "Modules": [
-        "CISXXX"
-      ],
-      "Weight": 20
-    },
-    {
-      "Name": "CW2",
-      "Volume": "4000 words",
-      "Modules": [
-        "CISXXX"
-      ],
-      "Weight": 80
-    }
-  ],
-  "Learning_objectives": [
-    {
-      "id": "LO1",
-      "Objective": "Lorem Ipsum",
-      "Modules": [
-        "CISXXX"
-      ],
-      "degreePrograms": []
-    },
-    {
-      "id": "LO2",
-      "Objective": "Lorem Ipsum",
-      "Modules": [
-        "CISXXX"
-      ],
-      "degreePrograms": []
-    }
-  ]
-}
+[
+  {
+    "degreePrograms": [
+      {
+        "id": "W4D7",
+        "name": "Web Development",
+        "level": "Undergraduate",
+        "academic_id": 0,
+        "Modules": [
+          {
+            "id": "CIS2167",
+            "name": "SERVER & CLIENT SIDE SCRIPTING 2022",
+            "hours": 0,
+            "credits": 0,
+            "academic_id": 0,
+            "academic_year_id": 0,
+            "Assessments": [
+              {
+                "Name": "CW1",
+                "Volume": "1000 words",
+                "Weight": 20
+              },
+              {
+                "Name": "CW2",
+                "Volume": "4000 words",
+                "Weight": 80
+              }
+            ]
+          },
+          {
+            "id": "CIS2167",
+            "name": "WEB APPLICATION DEVELOPMENT",
+            "hours": 0,
+            "credits": 0,
+            "academic_id": 0,
+            "academic_year_id": 0,
+            "Assessments": [
+              {
+                "Name": "CW1",
+                "Volume": "1000 words",
+                "Weight": 20,
+                "Learning_objectives": [
+                  {
+                    "id": "LO1",
+                    "Objective": "Lorem Ipsum",
+                    "degreeProgramId": "W4D7",
+                    "moduleId": "CISXXX"
+                  }
+                ]
+              },
+              {
+                "Name": "CW2",
+                "Volume": "4000 words",
+                "Weight": 80,
+                "Learning_objectives": [
+                  {
+                    "id": "LO2",
+                    "Objective": "Lorem Ipsum",
+                    "degreeProgramId": "W4D8"
+                  }
+                ]
+              }
+            ],
+            "Learning_objectives": [
+              {
+                "id": "LO1",
+                "Objective": "Lorem Ipsum",
+                "degreeProgramId": "W4D7",
+                "moduleId": "CISXXX"
+              },
+              {
+                "id": "LO2",
+                "Objective": "Lorem Ipsum",
+                "degreeProgramId": "W4D8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "users": [
+      {
+        "id": 0,
+        "name": "Joe Bloggs",
+        "role_id": 0
+      },
+      {
+        "id": 1,
+        "name": "Dan Bracey",
+        "role_id": 0
+      }
+    ],
+    "Timetable": [
+      {
+        "degreeProgramId": "W4D7",
+        "Room": "THF04",
+        "Begins_at": 1681378020,
+        "Ends_at": 1681385220,
+        "Recurring": 0,
+        "Academic": 0
+      }
+    ]
+  }
+]

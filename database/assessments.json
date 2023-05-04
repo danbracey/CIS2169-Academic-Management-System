@@ -1,0 +1,14 @@
+[
+  {
+    "id": 0,
+    "title": "CW1",
+    "volume": "1000 words",
+    "weighting": 20
+  },
+  {
+    "id": 0,
+    "title": "CW2",
+    "volume": "2000 words",
+    "weighting": 80
+  }
+]

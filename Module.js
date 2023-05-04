@@ -27,7 +27,7 @@ function createModule(course, moduleCode, moduleTitle) {
             title: moduleTitle_verified
         }),
         headers: {
-            "Content-type": "application/json; charset=UTF-8"
+            "Content-type": "application/database; charset=UTF-8"
         }
     });
 }

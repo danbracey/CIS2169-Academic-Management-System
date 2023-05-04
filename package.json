@@ -1,0 +1,7 @@
+{
+  "name": "CIS2169-Academic-Management-System",
+  "version": "1.0.0",
+  "dependencies": {
+    "quick-pivot": "^2.7.0"
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "CIS2167",
+    "name": "Module Title",
+    "hours": 0,
+    "credits": 0,
+    "academic_id": 0,
+    "academic_year_id": 0
+  },
+  {
+    "id": "CIS2169",
+    "name": "Web Application Development"
+  },
+  {
+    "id": "CIS2170",
+    "name": "Web Application Development"
+  },
+  {
+    "id": "CIS2171",
+    "name": "Web Application Development"
+  }
+]

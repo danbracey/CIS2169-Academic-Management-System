@@ -27,19 +27,19 @@ function getCourseData(courseID) {
 
             //Get LOs
             let LOs = [];
+            console.log(ourData[courseID]["Modules"][i]);
             try {
                 for(let lo=0; lo < ourData[courseID]["Modules"][i]["Learning_objectives"].length; lo++) {
                     let objective = ourData[courseID]["Modules"][i]["Learning_objectives"][lo]
-                    LOs.push('<td><span class="tooltip2" title="' + objective["Objective"] + '">' +
-                        objective["Name"] + '</span>')
+                    LOs.push(objective["id"])
                 }
             } catch(e) {
-                console.warn("Unable to find learning objectives for " + ourData[courseID]["id"])
+                console.warn("Unable to find learning objectives for " + ourData[courseID]["id"] + ". Error: " + e)
             }
 
 
             cell1.outerHTML = '<td><a href=' + i + '"course.html?id=">' + ourData[courseID]["Modules"][i]["Name"] + '</a></td>';
-            //cell2.innerHTML = LOs;
+            cell2.innerHTML = '<span class="tooltip2" title=' + LOs + '>' + ourData[courseID]["Modules"][i]["Learning_objectives"].length + '</span>';
             cell3.innerHTML = ourData[i]["Modules"][i]["Assessments"].length;
             cell4.innerHTML = calculateModuleTimetableHours(i, ourData[i]["Modules"][i]["Code"], ourData)
         }
