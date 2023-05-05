@@ -3,12 +3,14 @@
     "id": 0,
     "title": "CW1",
     "volume": "1000 words",
+    "due_date": 1683245826,
     "weighting": 20
   },
   {
     "id": 0,
     "title": "CW2",
     "volume": "2000 words",
+    "due_date": 1683245826,
     "weighting": 80
   }
 ]

@@ -1,11 +1,10 @@
 function getDegreeProgramData() {
     const ourRequest = new XMLHttpRequest();
-    ourRequest.open('GET', './db.json');
+    //Open JSON file containing degree programs
+    ourRequest.open('GET', '/database/degree_programs.json');
     ourRequest.onload = function(){
-        console.log(ourRequest.responseText);
-        var ourData = JSON.parse(ourRequest.responseText.degreePrograms);
-        console.log(ourData);
-        // Find a <table> element with id="myTable":
+        //Parse data and store it
+        var ourData = JSON.parse(ourRequest.responseText);
         var table = document.getElementById("degreePrograms");
 
         for(let i=0; i < ourData.length; i++) {

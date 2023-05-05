@@ -1,3 +1,6 @@
+import { Module } from '/classes/Module.js';
+
+
 function getCourseData(courseID) {
     let ourRequest;
     ourRequest = new XMLHttpRequest();
@@ -9,7 +12,7 @@ function getCourseData(courseID) {
         let course = ourData[courseID];
         console.log(course);
 
-        // Change title
+        // Change page title
         document.title = course["Course"] + " | Academic Management System";
 
         // Overview Information
@@ -37,7 +40,6 @@ function getCourseData(courseID) {
                 console.warn("Unable to find learning objectives for " + ourData[courseID]["id"] + ". Error: " + e)
             }
 
-
             cell1.outerHTML = '<td><a href=' + i + '"course.html?id=">' + ourData[courseID]["Modules"][i]["Name"] + '</a></td>';
             cell2.innerHTML = '<span class="tooltip2" title=' + LOs + '>' + ourData[courseID]["Modules"][i]["Learning_objectives"].length + '</span>';
             cell3.innerHTML = ourData[i]["Modules"][i]["Assessments"].length;
@@ -51,10 +53,14 @@ function calculateCourseTimetableHours(courseID, data) {
     console.log("Calculating timetabled hours for " + courseID)
     try {
         let hours = 0;
+        //For each module...
         for(let m = 0; m < data[courseID]["Modules"].length; m++) {
+            //Look for the embedded timetable
             for(let i = 0; i < data[courseID]["Modules"][m]["Timetable"].length; i++) {
+                //For each timetable slot, take the ending time away from the start time
                 let secondsPassed = data[courseID]["Modules"][m]["Timetable"][i]["Ends_at"] -
                     data[courseID]["Modules"][m]["Timetable"][i]["Begins_at"]
+                //Floor the seconds past mod 86400 divided by 1440 + 1 for UTC hours.
                 hours += Math.floor((secondsPassed % 86400) / 1440) + 1
             }
         }

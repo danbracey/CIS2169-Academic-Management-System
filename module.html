@@ -114,8 +114,14 @@
 </div>
 
 <script src="main.js"></script>
-<script src="Module.js"></script>
+<script src="Module.js" type="module"></script>
 <script>
+    //Get the current URL 'id' parameter value
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var paramValue = url.searchParams.get("id");
+
+    //Use this to get return the course data
     getModuleData(paramValue);
 
     $(document).ready(function(){

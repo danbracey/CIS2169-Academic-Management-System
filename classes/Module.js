@@ -1,4 +1,4 @@
-class Module extends DegreeProgram {
+export class Module extends DegreeProgram {
     public id;
     private _name;
     private _hours;
